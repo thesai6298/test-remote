@@ -27,19 +27,17 @@
 			<plugin>
 				<groupId>org.mule.tools.maven</groupId>
 				<artifactId>mule-maven-plugin</artifactId>
-				<version>${mule.maven.plugin.version}</version>
+				<version>3.2.0</version>
 				<extensions>true</extensions>
 				<configuration>
 					<cloudHubDeployment>
 						<uri>https://anypoint.mulesoft.com</uri>
-						<muleVersion>4.4.0</muleVersion>
+						<muleVersion>4.0.0</muleVersion>
 						<username>sai_dsu</username>
 						<password>Eskrishna@1</password>
 						<applicationName>test-remote</applicationName>
 						<environment>Sandbox</environment>
-						<workers>1</workers>
-						<workerType>Micro</workerType>
-						<objectStoreV2>true</objectStoreV2>
+						<region>{mule.region}</region>
 					</cloudHubDeployment>
 				</configuration>
 				
