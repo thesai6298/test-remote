@@ -18,32 +18,40 @@
 	</properties>
 
 	<build>
-		<plugins>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-clean-plugin</artifactId>
-				<version>3.5.0</version>
-			</plugin>
-			<plugin>
-				<groupId>org.mule.tools.maven</groupId>
-				<artifactId>mule-maven-plugin</artifactId>
-				<version>3.5.0</version>
-				<extensions>true</extensions>
-				<configuration>
-					<cloudHubDeployment>
-						<uri>https://anypoint.mulesoft.com</uri>
-						<muleVersion>4.0.0</muleVersion>
-						<username>sai_dsu</username>
-						<password>Eskrishna@1</password>
-						<applicationName>test-remote</applicationName>
-						<environment>Sandbox</environment>
-						<region>{mule.region}</region>
-					</cloudHubDeployment>
-				</configuration>
-				
-			</plugin>
-		</plugins>
-	</build>
+  <extensions>
+    <extension>
+      <groupId>org.mule.tools.maven</groupId>
+      <artifactId>mule-maven-plugin</artifactId>
+      <version>3.4.0</version>
+    </extension>
+  </extensions>
+
+  <plugins>
+    <plugin>
+      <groupId>org.apache.maven.plugins</groupId>
+      <artifactId>maven-clean-plugin</artifactId>
+      <version>3.5.0</version>
+    </plugin>
+
+    <plugin>
+      <groupId>org.mule.tools.maven</groupId>
+      <artifactId>mule-maven-plugin</artifactId>
+      <version>3.4.0</version>
+      <extensions>true</extensions>
+      <configuration>
+        <cloudHubDeployment>
+          <uri>https://anypoint.mulesoft.com</uri>
+          <muleVersion>4.3.0</muleVersion>
+          <username>sai_dsu</username>
+          <password>Eskrishna@1</password>
+          <applicationName>test-remote</applicationName>
+          <environment>Sandbox</environment>
+          <region>${mule.region}</region>
+        </cloudHubDeployment>
+      </configuration>
+    </plugin>
+  </plugins>
+</build>
 
 	<dependencies>
 		<dependency>
